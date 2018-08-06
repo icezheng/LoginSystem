@@ -1,0 +1,48 @@
+
+syntax = "proto3";
+
+package proto;
+
+service UniLogin {
+
+    // User login
+    rpc Login (LoginReq) returns (LoginResp);
+
+    // User register
+    rpc Register (RegisterReq) returns (RegisterResp);
+
+    // Check user session
+    rpc CheckSession (CheckSessionReq) returns (CheckSessionResp);
+
+}
+
+message RegisterReq {
+    string userName = 1;
+    string password = 2;
+}
+
+message RegisterResp {
+    int32 errcode = 1;
+    string errmsg = 2;
+}
+
+message LoginReq {
+    string userName = 1;
+    string password = 2;
+}
+
+message LoginResp {
+    int32 errcode = 1;
+    string errmsg = 2;
+    string sessionId = 3;
+}
+
+message CheckSessionReq {
+    string sessionId = 1;
+}
+
+message CheckSessionResp {
+    int32 errcode = 1;
+    string errmsg = 2;
+    bool isValid = 3;
+}
