@@ -1,0 +1,2 @@
+out/Default/obj.target/uni_login/uni_login.grpc.pb.o: \
+  uni_login.grpc.pb.cc uni_login.pb.h uni_login.grpc.pb.h

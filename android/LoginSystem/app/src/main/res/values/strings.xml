@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LoginSystem</string>
+
+    <string name="info_unavailable">请确认输入信息正确</string>
+    <string name="need_login">请先登录</string>
+
+</resources>

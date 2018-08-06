@@ -1,0 +1,22 @@
+server_client = interface +c {
+	static create(): server_client;
+    register_account(user_name: string, password: string): register_response;
+    login_account(user_name: string, password: string): login_response;
+    check_session(session_id: string): check_session_response;
+}
+
+register_response = record {
+    success: bool;
+}
+
+login_response = record {
+     success: bool;
+     session_id: string;
+}
+
+check_session_response = record {
+    success: bool;
+    is_valid: bool;
+}
+
+
